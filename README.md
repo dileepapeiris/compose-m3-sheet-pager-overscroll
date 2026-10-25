@@ -1,7 +1,3 @@
-
-
-https://github.com/user-attachments/assets/a39a0330-4d11-45f5-be59-9e83294c5e83
-
 # Material3 `ModalBottomSheet` + `HorizontalPager`: the page overscrolls against the swipe after it settles
 
 Minimal Jetpack Compose reproduction, no third-party libraries.
@@ -61,8 +57,12 @@ counted twice: `fling.x=-17905 consumed.x=-35810 leftForOverscroll.x=17905`.
 | --- | --- |
 | ![inline](media/1-inline-pager.png) | ![sheet](media/2-pager-in-sheet.png) |
 
-Recording of flings in the sheet on 1.5.0-beta02, pager area, played at quarter speed. Right after
-the page settles it is drawn wider than its rest size, then springs back:
+Screen recording of flings in the sheet on 1.5.0-beta02. Each fast fling lands, then the page
+stretches against the swipe for a few frames and springs back:
+
+https://github.com/user-attachments/assets/a39a0330-4d11-45f5-be59-9e83294c5e83
+
+The pager area at quarter speed:
 
 ![sheet fling, quarter speed](media/3-sheet-fling-beta02-quarter-speed.gif)
 
@@ -72,7 +72,7 @@ at rest.
 
 ![frames after settle](media/4-frames-after-settle-beta02.png)
 
-Full recording: [media/3-sheet-fling-beta02.mp4](media/3-sheet-fling-beta02.mp4).
+The raw file is also in the repository: [media/3-sheet-fling-beta02.mp4](media/3-sheet-fling-beta02.mp4).
 
 ## Root cause
 
