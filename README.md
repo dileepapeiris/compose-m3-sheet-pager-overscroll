@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/a39a0330-4d11-45f5-be59-9e83294c5e83
+
 # Material3 `ModalBottomSheet` + `HorizontalPager`: the page overscrolls against the swipe after it settles
 
 Minimal Jetpack Compose reproduction, no third-party libraries.
