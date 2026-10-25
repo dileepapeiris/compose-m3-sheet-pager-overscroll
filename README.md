@@ -90,16 +90,6 @@ The pager consumes its whole fling while snapping, so `velocityLeft.x` is about 
 overscroll effect receives the fling velocity, reversed. Before 1.5.0-alpha10 the method returned
 `available`, which has no horizontal component here.
 
-## Fix
-
-Report only what the sheet consumed, on the sheet's axis:
-
-```kotlin
-return if (orientation == Orientation.Horizontal) {
-    Velocity(consumedByAnchoredDraggableFling, 0f)
-} else {
-    Velocity(0f, consumedByAnchoredDraggableFling)
-}
 ```
 
 ## Environment
