@@ -57,9 +57,18 @@ counted twice: `fling.x=-17905 consumed.x=-35810 leftForOverscroll.x=17905`.
 | --- | --- |
 | ![inline](media/1-inline-pager.png) | ![sheet](media/2-pager-in-sheet.png) |
 
-Video recording
+Recording of flings in the sheet on 1.5.0-beta02, pager area, played at quarter speed. Right after
+the page settles it is drawn wider than its rest size, then springs back:
 
-<video src="media/3-sheet-fling-beta02.mp4" controls autoplay muted loop playsinline width="100%"> Your browser does not support the video tag. </video>
+![sheet fling, quarter speed](media/3-sheet-fling-beta02-quarter-speed.gif)
+
+The recorded frames around the settle. First frame: still scrolling. Second: the page has reached
+its position but is drawn 32 px wider on the right, the stretch. Third: springing back. Last two:
+at rest.
+
+![frames after settle](media/4-frames-after-settle-beta02.png)
+
+Full recording: [media/3-sheet-fling-beta02.mp4](media/3-sheet-fling-beta02.mp4).
 
 ## Root cause
 
@@ -90,8 +99,6 @@ The pager consumes its whole fling while snapping, so `velocityLeft.x` is about 
 `consumedPost.x` is about `available.x`. That makes `totalLeft.x` about `-available.x`: the
 overscroll effect receives the fling velocity, reversed. Before 1.5.0-alpha10 the method returned
 `available`, which has no horizontal component here.
-
-```
 
 ## Environment
 
