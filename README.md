@@ -11,6 +11,12 @@ outside the sheet settles cleanly.
 - Visible on Android 12 and newer, where overscroll is the stretch effect.
 - Foundation is pinned to 1.12.1 in every build, so only Material3 changes.
 
+## Status
+
+- Bug: https://issuetracker.google.com/issues/577461569
+- Fix under review: https://android-review.googlesource.com/c/platform/frameworks/support/+/4389664
+  (one line in `SheetDefaults.kt` plus a `ModalBottomSheetTest` case)
+
 ## Run it
 
 ```sh
