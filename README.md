@@ -57,8 +57,9 @@ counted twice: `fling.x=-17905 consumed.x=-35810 leftForOverscroll.x=17905`.
 | --- | --- |
 | ![inline](media/1-inline-pager.png) | ![sheet](media/2-pager-in-sheet.png) |
 
-[media/3-sheet-fling-beta02.mp4](media/3-sheet-fling-beta02.mp4): flings in the sheet on
-1.5.0-beta02. After the first fling settles, the page stretches against the swipe and springs back.
+Video recording
+
+<video src="media/3-sheet-fling-beta02.mp4" controls autoplay muted loop playsinline width="100%"> Your browser does not support the video tag. </video>
 
 ## Root cause
 
